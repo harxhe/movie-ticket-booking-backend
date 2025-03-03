@@ -2,13 +2,8 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Enum
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 
-# SQLite Database URL
 DATABASE_URL = "sqlite:///movies.db"
-
-# Create Database Engine
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
-
-# Create Session
 SessionLocal = sessionmaker(bind=engine)
 Base = declarative_base()
 
