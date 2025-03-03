@@ -1,6 +1,6 @@
-# movie-ticket-booking-backend
+#  Movie Ticket Booking Backend
 
-## 📌 Project Overview
+##  Project Overview
 This is a **Flask-based backend system** for booking movie tickets. It supports two user roles:  
 - **User** – Can view movies and book tickets.  
 - **Theater Owner** – Can manage movie listings (to be implemented).  
@@ -9,15 +9,15 @@ The system currently includes **user authentication**, database setup, and API t
 
 ---
 
-## 📂 Tech Stack
+##  Tech Stack
 - **Backend:** Flask  
 - **Database:** SQLite (can switch to MySQL later)  
 - **Security:** Flask-Bcrypt (password hashing), JWT (coming soon)  
 
 ---
 
-## 📌 Features Implemented
-### ✅ Database Setup (SQLite)
+##  Features Implemented
+###  Database Setup (SQLite)
 - Created three tables using SQLAlchemy:
   - **Users** (`id`, `name`, `email`, `password`, `role`)
   - **Movies** (`id`, `title`, `duration`, `genre`)
@@ -25,6 +25,6 @@ The system currently includes **user authentication**, database setup, and API t
 
 ---
 
-### ✅ User Authentication
+###  User Authentication
 - **Signup (`/signup`)**: Allows new users to register.  
 - **Login (`/login`)**: Verifies user credentials and allows access.  
