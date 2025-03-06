@@ -12,7 +12,7 @@ The system currently includes **user authentication**, database setup, and API t
 ##  Tech Stack
 - **Backend:** Flask  
 - **Database:** SQLite (can switch to MySQL later)  
-- **Security:** Flask-Bcrypt (password hashing), JWT (coming soon)  
+- **Security:** Flask-Bcrypt (password hashing), JWT
 
 ---
 
