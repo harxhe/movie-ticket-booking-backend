@@ -25,21 +25,21 @@ The system currently includes **user authentication**, database setup, and API t
 
 ---
 
-# ✅ Features Added  
+##  Features Added  
 
-## 1️⃣ User Authentication  
+### 1️ User Authentication  
 - **Signup** → `POST /signup` (Create user)  
 - **Login** → `POST /login` (Get JWT token)  
 
-## 2️⃣ Movie Management (Owner Only)  
+### 2️ Movie Management (Owner Only)  
 - **Add Movie** → `POST /movies` (Requires JWT)  
 - **Get Movies** → `GET /movies` (Anyone can access)  
 
-## 3️⃣ Show Management (Owner Only)  
+### 3️ Show Management (Owner Only)  
 - **Add Show** → `POST /shows` (Requires JWT)  
 - **Get Shows** → `GET /shows` (Anyone can access)  
 
-## 4️⃣ Ticket Booking (User Only)  
+### 4️ Ticket Booking (User Only)  
 - **Book Ticket** → `POST /bookings` (Requires JWT)  
 - **View Past Bookings** → `GET /bookings` (Requires JWT)  
 
