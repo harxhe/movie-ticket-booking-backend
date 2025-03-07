@@ -124,3 +124,14 @@ Authentication is implemented using JSON Web Tokens (JWT).
 ---
 
 This system ensures **secure authentication**, **role-based access**, and **smooth booking functionality**! 🚀  
+
+## Importing Postman Collection
+
+To test the Movie Ticket Booking API using Postman:
+
+1. Open **Postman**.
+2. Click on **File** > **Import**.
+3. Select the `requests.json` file.
+4. Click **Open** to import all API requests.
+5. Update authentication tokens before testing secured endpoints.
+
