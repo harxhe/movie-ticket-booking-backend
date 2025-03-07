@@ -32,14 +32,14 @@ The system currently includes **user authentication**, database setup, and API t
 - **Login** → `POST /login` (Get JWT token)  
 
 ### 2️ Movie Management (Owner Only)  
-- **Add Movie** → `POST /movies` (Requires JWT)  
+- **Add Movie** → `POST /movies` (Requires JWT, Only owners can access)  
 - **Get Movies** → `GET /movies` (Anyone can access)  
 
 ### 3️ Show Management (Owner Only)  
-- **Add Show** → `POST /shows` (Requires JWT)  
+- **Add Show** → `POST /shows` (Requires JWT,Only owners can access)  
 - **Get Shows** → `GET /shows` (Anyone can access)  
 
 ### 4️ Ticket Booking (User Only)  
-- **Book Ticket** → `POST /bookings` (Requires JWT)  
-- **View Past Bookings** → `GET /bookings` (Requires JWT)  
+- **Book Ticket** → `POST /bookings` (Requires JWT,Only users can access)  
+- **View Past Bookings** → `GET /bookings` (Requires JWT,Only users can access)  
 
