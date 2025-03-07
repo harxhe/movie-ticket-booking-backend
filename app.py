@@ -30,7 +30,7 @@ def signup():
         return jsonify({'message': 'Email already registered'}), 400
 
     new_user = User(name=name, email=email, role=role)
-    new_user.set_password(password)  # Use set_password from User model
+    new_user.set_password(password)  
     db.session.add(new_user)
     db.session.commit()
 
@@ -61,10 +61,9 @@ def protected():
 @app.route('/movies', methods=['POST'])
 @jwt_required()
 def add_movie():
-    current_user = json.loads(get_jwt_identity())  # Get user from JWT token
+    current_user = json.loads(get_jwt_identity()) 
 
-    # Check if the user is an owner
-    if current_user['role'] != 'owner':
+    if current_user['role'] != 'owner': #only owners can access
         return jsonify({"message": "Only theater owners can add movies"}), 403
 
     data = request.get_json()
@@ -75,7 +74,6 @@ def add_movie():
     if not title or not genre or not duration:
         return jsonify({"message": "All fields are required"}), 400
 
-    # Create a new Movie object
     new_movie = Movie(title=title, genre=genre, duration=duration)
     db.session.add(new_movie)
     db.session.commit()
@@ -84,7 +82,7 @@ def add_movie():
 
 @app.route('/movies', methods=['GET'])
 def get_movies():
-    movies = Movie.query.all()  # Get all movies from the database
+    movies = Movie.query.all() 
     movies_list = [
         {"id": movie.id, "title": movie.title, "genre": movie.genre, "duration": movie.duration}
         for movie in movies
@@ -122,7 +120,7 @@ def get_shows():
     for show in shows:
         result.append({
             'id': show.id,
-            'movie_title': show.movie.title,  # Fetch movie title from relationship
+            'movie_title': show.movie.title,  
             'theater_name': show.theater_name,
             'show_time': show.show_time,
             'available_seats': show.available_seats
